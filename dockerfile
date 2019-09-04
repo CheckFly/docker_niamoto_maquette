@@ -21,6 +21,7 @@ RUN git clone https://github.com/CheckFly/niamoto_maquette.git
 
 # ajout de la tâche cron
 ADD pull_auto /etc/cron.d
+#ADD cron /etc/init.d
 
 # mise à jour du fichier de configuration nginx
 RUN rm /etc/nginx/conf.d/default.conf
@@ -31,3 +32,4 @@ EXPOSE 80
 
 # On partage un dossier de log
 VOLUME /app/log
+
